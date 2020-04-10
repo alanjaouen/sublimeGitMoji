@@ -1,5 +1,7 @@
 # Gitmoji
 
+[![time tracker](https://wakatime.com/badge/github/alanJaouen/sublimeGitMoji.svg)](https://wakatime.com/badge/github/alanJaouen/sublimeGitMoji)
+
 A Sublime Text 3 plugin to insert emoji from the fantastic [gitmoji.carloscuesta.me](https://gitmoji.carloscuesta.me/).
 
 ## Usage
