@@ -1,0 +1,10 @@
+[
+	{
+		"caption": "Gitmoji: Insert emoji",
+		"command": "select_gitmoji"
+	},
+		{
+		"caption": "Gitmoji: Insert shortcode",
+		"command": "select_gitmoji_shortcode"
+	}
+]
