@@ -5,7 +5,10 @@
 ![licence](https://img.shields.io/static/v1?label=Licence&message=CeCILL&color=blue&style=flat&link=https://cecill.info/objectifs.en.html)
 
 
-A Sublime Text 3 plugin to insert emoji from the fantastic [gitmoji.carloscuesta.me](https://gitmoji.carloscuesta.me/).
+> Inspired by <a href="https://gitmoji.carloscuesta.me"><img src="https://cloud.githubusercontent.com/assets/7629661/20073135/4e3db2c2-a52b-11e6-85e1-661a8212045a.gif" width="80" alt="gitmoji" style="vertical-align: middle;"></a>
+
+This extension helps you to add emoji on your commit messages.
+Using emojis on commit messages provides an easy way of identifying the purpose or intention of a commit with only looking at the emojis used.
 
 ## Usage
 
@@ -15,10 +18,9 @@ Select ``Gitmoji: Insert emoji`` or ``Gitmoji: Insert shortcode`` in command pal
 
 ![screenshot menu](https://i.ibb.co/1ngYZ7f/Screenshot-7.png)
 
-
 Then type your use case and select the right emoji.
 
-![screenshot menu](https://i.ibb.co/dP8HkvF/Screenshot-8.png)
+![screenshot menu 2](https://i.ibb.co/dP8HkvF/Screenshot-8.png)
 
 ## Installation
 
