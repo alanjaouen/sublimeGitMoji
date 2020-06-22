@@ -1,0 +1,7 @@
+# Welcome to GitMoji
+
+Use ``ctrl+shift+P`` to open command palette.
+
+Select ``Gitmoji: Insert emoji`` or ``Gitmoji: Insert shortcode`` in command palette.
+
+Then type your use case and select the right emoji.

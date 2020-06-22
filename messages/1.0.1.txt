@@ -1,0 +1,4 @@
+Changes since 1.0.0:
+
+	- Update emoji lib and description
+	- Yhese update messages
