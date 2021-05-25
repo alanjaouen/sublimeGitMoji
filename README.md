@@ -2,7 +2,6 @@
 
 ![time tracker](https://wakatime.com/badge/github/alanJaouen/sublimeGitMoji.svg)
 ![flake8](https://github.com/alanJaouen/sublimeGitMoji/workflows/flake8/badge.svg?branch=master)
-![licence](https://img.shields.io/static/v1?label=Licence&message=CeCILL&color=blue&style=flat&link=https://cecill.info/objectifs.en.html)
 
 
 > Inspired by <a href="https://gitmoji.carloscuesta.me"><img src="https://cloud.githubusercontent.com/assets/7629661/20073135/4e3db2c2-a52b-11e6-85e1-661a8212045a.gif" width="80" alt="gitmoji" style="vertical-align: middle;"></a>
@@ -20,7 +19,7 @@ Select ``Gitmoji: Insert emoji`` or ``Gitmoji: Insert shortcode`` in command pal
 
 Then type your use case and select the right emoji.
 
-![screenshot menu 2](https://i.ibb.co/dP8HkvF/Screenshot-8.png)
+![screenshot menu 2](https://i.ibb.co/VwH7LQg/image.png)
 
 ## Installation
 
