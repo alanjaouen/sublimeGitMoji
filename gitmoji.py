@@ -1,6 +1,7 @@
 import json
 import sublime
 import sublime_plugin
+from sublimeGitMoji.settings import sublimeGitMojiSettings
 
 
 def parse_json():
@@ -11,7 +12,11 @@ def parse_json():
 class SelectGitmojiGlobalCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        data = parse_json()
+        setting = sublimeGitMojiSettings()
+        default_data = parse_json()
+        custom_data = setting.get(key='custom_gitmojis', default=[])
+        print(custom_data)
+        data = default_data + custom_data
         data = [[emoji[self.to_insert], emoji['description'], self.presentation.format(
             emoji[self.to_insert], emoji['description'])] for emoji in data]
         list_item = [item[-1] for item in data]
