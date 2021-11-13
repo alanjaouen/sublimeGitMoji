@@ -1,5 +1,13 @@
 [
 	{
+		"caption": "Preferences: Gitmoji Settings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/sublimeGitMoji/SublimeGitMoji.sublime-settings",
+			"default": "{\n\t$0\n}\n"
+		}
+	},
+	{
 		"caption": "Gitmoji: Insert emoji",
 		"command": "select_gitmoji"
 	},
