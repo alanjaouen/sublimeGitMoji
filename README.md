@@ -21,6 +21,13 @@ Then type your use case and select the right emoji.
 
 ![screenshot menu 2](https://i.ibb.co/VwH7LQg/image.png)
 
+## Customization
+
+You can add your own emojis and description to fit your needs by adding them in the settings file.
+
+use the menu preferences -> Package Settings -> GitMoji -> Settings
+or type ``Preferences: Gitmoji Settings`` in the command palette.
+
 ## Installation
 
 Use ``ctrl+shift+P`` to open command palette.
