@@ -1,0 +1,5 @@
+Changes since 1.0.9:
+
+	- ✨ load custom emojis from settings
+	- ✨ add settings file management
+	- ♻️ remove code duplication
