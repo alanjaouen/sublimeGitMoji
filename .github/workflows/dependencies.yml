@@ -1,0 +1,38 @@
+on: workflow_dispatch
+name: update dependencies
+
+jobs:
+  update-gitmoji:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: clone carloscuesta/gitmoji
+        run: gh repo clone carloscuesta/gitmoji
+
+      - name: move ressource
+        run: cp --verbose ./gitmoji/src/data/gitmoji.json .
+
+      - name: delete local carloscuesta/gitmoji
+        run: rm --force --recursive gitmoji
+
+      - name: check diff
+        run: |
+          if git diff --exit-code .\gitmojis.json; then
+            echo "diff='true'" >> $GITHUB_ENV
+          fi
+
+      - name: create branch and commit
+        if: ${{ env.tests_needed == 'true' }}
+        run: |
+          git checkout -b dependencie_$(date +%d-%m-%Y_%H-%M)
+          git add gitmojis.json
+          git commit --message '✨ gitmojis.json: update emojis list'
+
+      - name: publish branch
+        run: git push
+
+      - name: create pr
+        run: gh pr create --assignee alanJaouen --fill
