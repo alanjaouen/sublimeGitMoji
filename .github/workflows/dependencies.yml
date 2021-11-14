@@ -25,14 +25,16 @@ jobs:
           fi
 
       - name: create branch and commit
-        if: ${{ env.tests_needed == 'true' }}
+        if: ${{ env.diff == 'true' }}
         run: |
           git checkout -b dependencie_$(date +%d-%m-%Y_%H-%M)
           git add gitmojis.json
           git commit --message '✨ gitmojis.json: update emojis list'
 
       - name: publish branch
+        if: ${{ env.diff == 'true' }}
         run: git push
 
       - name: create pr
+        if: ${{ env.diff == 'true' }}
         run: gh pr create --assignee alanJaouen --fill
