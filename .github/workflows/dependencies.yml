@@ -29,6 +29,8 @@ jobs:
         run: |
           git checkout -b dependencie_$(date +%d-%m-%Y_%H-%M)
           git add gitmojis.json
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git commit --message '✨ gitmojis.json: update emojis list'
 
       - name: publish branch
