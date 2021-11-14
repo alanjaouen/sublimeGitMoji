@@ -1,6 +1,7 @@
 import json
 import sublime
 import sublime_plugin
+from sublimeGitMoji.settings import sublimeGitMojiSettings
 
 
 def parse_json():
@@ -8,13 +9,16 @@ def parse_json():
         "/".join(("Packages", __package__, "gitmojis.json")))
     return json.loads(my_file.decode("utf-8"))['gitmojis']
 
-
-class SelectGitmojiCommand(sublime_plugin.TextCommand):
+class SelectGitmojiGlobalCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        data = parse_json()
-        data = [[emoji['emoji'], emoji['description'], "{} {}".format(
-            emoji['emoji'], emoji['description'])] for emoji in data]
+        setting = sublimeGitMojiSettings()
+        default_data = parse_json()
+        custom_data = setting.get(key='custom_gitmojis', default=[])
+        print(custom_data)
+        data = default_data + custom_data
+        data = [[emoji[self.to_insert], emoji['description'], self.presentation.format(
+            emoji[self.to_insert], emoji['description'])] for emoji in data]
         list_item = [item[-1] for item in data]
 
         def callback(selection):
@@ -25,17 +29,13 @@ class SelectGitmojiCommand(sublime_plugin.TextCommand):
         self.view.window().show_quick_panel(list_item, callback)
 
 
-class SelectGitmojiShortcodeCommand(sublime_plugin.TextCommand):
+class SelectGitmojiCommand(SelectGitmojiGlobalCommand):
 
-    def run(self, edit):
-        data = parse_json()
-        data = [[emoji['code'], emoji['description'], "|{}| {}".format(
-            emoji['code'], emoji['description'])] for emoji in data]
-        list_item = [item[-1] for item in data]
+    to_insert = 'emoji'
+    presentation = '{} {}'
 
-        def callback(selection):
-            if selection >= 0:
-                emoji = data[selection][0]
-                self.view.run_command("insert", {"characters": emoji})
 
-        self.view.window().show_quick_panel(list_item, callback)
+class SelectGitmojiShortcodeCommand(SelectGitmojiGlobalCommand):
+
+    to_insert = 'code'
+    presentation = '|{}| {}'

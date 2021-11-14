@@ -1,7 +1,16 @@
 # Welcome to GitMoji
 
+## Usage
+
 Use ``ctrl+shift+P`` to open command palette.
 
 Select ``Gitmoji: Insert emoji`` or ``Gitmoji: Insert shortcode`` in command palette.
 
 Then type your use case and select the right emoji.
+
+## Customization
+
+You can add your own emoji and description to fit your needs by adding them in the settings file.
+
+use the menu preferences -> Package Settings -> GitMoji -> Settings
+or type ``Preferences: Gitmoji Settings`` in the command palette.
