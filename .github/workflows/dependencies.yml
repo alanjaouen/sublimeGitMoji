@@ -20,7 +20,7 @@ jobs:
 
       - name: check diff
         run: |
-          if git diff --exit-code .\gitmojis.json; then
+          if git diff --exit-code gitmojis.json; then
             echo "diff='true'" >> $GITHUB_ENV
           fi
 
