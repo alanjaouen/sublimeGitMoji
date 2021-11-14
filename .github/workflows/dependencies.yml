@@ -35,7 +35,7 @@ jobs:
 
       - name: publish branch
         if: ${{ env.diff == 'true' }}
-        run: git push
+        run: git push -u
 
       - name: create pr
         if: ${{ env.diff == 'true' }}
