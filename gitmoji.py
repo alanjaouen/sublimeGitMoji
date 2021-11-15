@@ -1,7 +1,7 @@
 import json
 import sublime
 import sublime_plugin
-from sublimeGitMoji.settings import sublimeGitMojiSettings
+from .settings import sublimeGitMojiSettings
 
 
 def parse_json():
