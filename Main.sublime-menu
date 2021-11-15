@@ -14,7 +14,7 @@
                                 "caption": "Settings",
                                 "command": "edit_settings",
                                 "args": {
-                                    "base_file": "${packages}/sublimeGitMoji/SublimeGitMoji.sublime-settings",
+                                    "base_file": "${packages}/Gitmoji/SublimeGitMoji.sublime-settings",
                                     "default": "{\n\t$0\n}\n"
                                 }
                             }
