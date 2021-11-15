@@ -1,0 +1,5 @@
+Changes since 1.1.0:
+
+	- 🍱 sublime-settings: fill default settings with structure
+	- 🐛 sublime-menu and command: fix settings path
+	- 🐛 gitmoji.py: fix import
