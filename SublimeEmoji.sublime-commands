@@ -3,8 +3,8 @@
 		"caption": "Preferences: Gitmoji Settings",
 		"command": "edit_settings",
 		"args": {
-			"default": "{\n\t$0\n}\n"
 			"base_file": "${packages}/Gitmoji/SublimeGitMoji.sublime-settings",
+			"default": "{\n\t\"custom_gitmojis\": [\n\t\t$0\n\t]\n}\n"
 		}
 	},
 	{
