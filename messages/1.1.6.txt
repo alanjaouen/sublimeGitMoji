@@ -1,0 +1,3 @@
+Changes since 1.1.5:
+
+	- ⬆️ Update emoji lib and description
