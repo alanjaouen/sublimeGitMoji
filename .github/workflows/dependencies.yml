@@ -1,7 +1,7 @@
 on:
   schedule:
-    - cron:  '0 15 * * *'
-name: update dependencies
+    - cron:  '0 0 * * 1'
+name: update emojis list
 
 jobs:
   update-gitmoji:
@@ -15,7 +15,7 @@ jobs:
         run: gh repo clone carloscuesta/gitmoji
 
       - name: move ressource
-        run: cp --verbose ./gitmoji/src/data/gitmojis.json .
+        run: cp --verbose ./gitmoji/packages/gitmojis/src/gitmojis.json .
 
       - name: delete local carloscuesta/gitmoji
         run: rm --force --recursive gitmoji
